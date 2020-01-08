@@ -80,6 +80,7 @@ newLink2.style.color = '#26bf1b'
 
 // cta section
 let ctaText = document.querySelector('.cta-text h1')
+siteContent.cta.h1 = "Dom <br> Is <br> Awesome"
 ctaText.innerHTML = siteContent.cta['h1']
 
 let ctaButton = document.querySelector('.cta-text button')
