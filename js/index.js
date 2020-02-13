@@ -89,7 +89,7 @@ ctaButton.innerText = siteContent.cta['button']
 let ctaImg = document.getElementById('cta-img')
 ctaImg.src = siteContent.cta['img-src']
 
-// Event Listener
+// Event Listener (mouse)
 ctaImg.addEventListener('mouseenter', () => {
   ctaImg.style.transform = 'scale(1.2)';
   ctaImg.style.transition = 'transform 0.3s';
@@ -105,6 +105,13 @@ textH4[1].innerText = siteContent['main-content']['about-h4']
 textH4[2].innerText = siteContent['main-content']['services-h4']
 textH4[3].innerText = siteContent['main-content']['product-h4']
 textH4[4].innerText = siteContent['main-content']['vision-h4']
+
+// Event Listener (mouse)
+document.querySelectorAll('.text-content h4').forEach(el => {
+  el.addEventListener('click', () => {
+    el.style.color = 'gray';
+  })
+})
 
 // textH4.forEach((item, index) => {
 //   item.textContent = siteContent.main-content['features-h4' + (index + 1)]
