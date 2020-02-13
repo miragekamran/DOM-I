@@ -120,6 +120,15 @@ textp[4].innerText = siteContent['main-content']['vision-content']
 let middleImg = document.getElementById('middle-img')
 middleImg.src = siteContent['main-content']['middle-img-src']
 
+// Event Listener
+middleImg.addEventListener('mouseenter', () => {
+  middleImg.style.transform = 'scale(1.2)';
+  middleImg.style.transition = 'transform 0.3s';
+})
+middleImg.addEventListener('mouseleave', () => {
+  middleImg.style.transform = 'scale(1)';
+})
+
 // contact section
 let contacth4 = document.querySelector('.contact h4')
 contacth4.innerText = siteContent['contact']['contact-h4']
