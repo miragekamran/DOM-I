@@ -103,6 +103,10 @@ ctaImg.addEventListener('mouseleave', () => {
   ctaImg.style.transform = 'scale(1)';
 })
 
+// Event Listener (resize)
+window.addEventListener('resize', () => {
+  ctaImg.src = 'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/124123317/original/7514a67de60f80aecd20880a5870b192c3084c41/code-any-python-program-from-a-small-app-to-a-complex-software.png';
+})
 // Middle content
 let textH4 = document.querySelectorAll('.text-content h4')
 textH4[0].innerText = siteContent['main-content']['features-h4']
