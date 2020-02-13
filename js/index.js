@@ -89,6 +89,15 @@ ctaButton.innerText = siteContent.cta['button']
 let ctaImg = document.getElementById('cta-img')
 ctaImg.src = siteContent.cta['img-src']
 
+// Event Listener
+ctaImg.addEventListener('mouseenter', () => {
+  ctaImg.style.transform = 'scale(1.2)';
+  ctaImg.style.transition = 'transform 0.3s';
+})
+ctaImg.addEventListener('mouseleave', () => {
+  ctaImg.style.transform = 'scale(1)';
+})
+
 // Middle content
 let textH4 = document.querySelectorAll('.text-content h4')
 textH4[0].innerText = siteContent['main-content']['features-h4']
