@@ -42,6 +42,11 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.src = siteContent['nav']['img-src']
 
+// Event Listener (double click)
+logo.addEventListener("dblclick", () => {
+  logo.src="https://www.edigitalagency.com.au/wp-content/uploads/small-google-logo-png-transparent-background-600x200.png";
+})
+
 // Updading navigation
 let navLinks = document.querySelectorAll('nav a')
 console.log(navLinks)
@@ -113,6 +118,8 @@ document.querySelectorAll('.text-content h4').forEach(el => {
   })
 })
 
+
+
 // textH4.forEach((item, index) => {
 //   item.textContent = siteContent.main-content['features-h4' + (index + 1)]
 // })
@@ -127,7 +134,7 @@ textp[4].innerText = siteContent['main-content']['vision-content']
 let middleImg = document.getElementById('middle-img')
 middleImg.src = siteContent['main-content']['middle-img-src']
 
-// Event Listener
+// Event Listener (mouse)
 middleImg.addEventListener('mouseenter', () => {
   middleImg.style.transform = 'scale(1.2)';
   middleImg.style.transition = 'transform 0.3s';
