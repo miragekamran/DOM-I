@@ -38,5 +38,124 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.src = siteContent['nav']['img-src']
+
+// Event Listener (double click)
+logo.addEventListener("dblclick", () => {
+  logo.src="https://www.edigitalagency.com.au/wp-content/uploads/small-google-logo-png-transparent-background-600x200.png";
+})
+
+// Updading navigation
+let navLinks = document.querySelectorAll('nav a')
+console.log(navLinks)
+
+navLinks[0].text = siteContent.nav['nav-item-1'];
+navLinks[1].text = siteContent.nav['nav-item-2'];
+navLinks[2].text = siteContent.nav['nav-item-3'];
+navLinks[3].text = siteContent.nav['nav-item-4'];
+navLinks[4].text = siteContent.nav['nav-item-5'];
+navLinks[5].text = siteContent.nav['nav-item-6'];
+
+navLinks.forEach(item => {
+  item.style.color = '#26bf1b';
+  
+})
+
+
+let navigation = document.querySelector('nav')
+let newLink = document.createElement('a')
+newLink.innerText = 'Facebook'
+navigation.append(newLink)
+
+newLink.style.color = '#26bf1b'
+
+let newLink2 = document.createElement('a')
+newLink2.innerText = 'Twetter';
+navigation.prepend(newLink2);
+
+newLink2.style.color = '#26bf1b'
+
+// const navi = document.querySelectorAll('nav a');
+// navi.forEach((item, index) => {
+//   item.textContent = siteContent['nav']['nav-item-' + (index + 1)];
+// })
+
+
+// cta section
+let ctaText = document.querySelector('.cta-text h1')
+siteContent.cta.h1 = "Dom <br> Is <br> Awesome"
+ctaText.innerHTML = siteContent.cta['h1']
+
+let ctaButton = document.querySelector('.cta-text button')
+ctaButton.innerText = siteContent.cta['button']
+
+let ctaImg = document.getElementById('cta-img')
+ctaImg.src = siteContent.cta['img-src']
+
+// Event Listener (mouse)
+ctaImg.addEventListener('mouseenter', () => {
+  ctaImg.style.transform = 'scale(1.2)';
+  ctaImg.style.transition = 'transform 0.3s';
+})
+ctaImg.addEventListener('mouseleave', () => {
+  ctaImg.style.transform = 'scale(1)';
+})
+
+// Event Listener (resize)
+window.addEventListener('resize', () => {
+  ctaImg.src = 'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/124123317/original/7514a67de60f80aecd20880a5870b192c3084c41/code-any-python-program-from-a-small-app-to-a-complex-software.png';
+})
+// Middle content
+let textH4 = document.querySelectorAll('.text-content h4')
+textH4[0].innerText = siteContent['main-content']['features-h4']
+textH4[1].innerText = siteContent['main-content']['about-h4']
+textH4[2].innerText = siteContent['main-content']['services-h4']
+textH4[3].innerText = siteContent['main-content']['product-h4']
+textH4[4].innerText = siteContent['main-content']['vision-h4']
+
+// Event Listener (mouse)
+document.querySelectorAll('.text-content h4').forEach(el => {
+  el.addEventListener('click', () => {
+    el.style.color = 'gray';
+  })
+})
+
+
+
+// textH4.forEach((item, index) => {
+//   item.textContent = siteContent.main-content['features-h4' + (index + 1)]
+// })
+
+let textp = document.querySelectorAll('.text-content p')
+textp[0].innerText = siteContent['main-content']['features-content']
+textp[1].innerText = siteContent['main-content']['about-content']
+textp[2].innerText = siteContent['main-content']['services-content']
+textp[3].innerText = siteContent['main-content']['product-content']
+textp[4].innerText = siteContent['main-content']['vision-content']
+
+let middleImg = document.getElementById('middle-img')
+middleImg.src = siteContent['main-content']['middle-img-src']
+
+// Event Listener (mouse)
+middleImg.addEventListener('mouseenter', () => {
+  middleImg.style.transform = 'scale(1.2)';
+  middleImg.style.transition = 'transform 0.3s';
+})
+middleImg.addEventListener('mouseleave', () => {
+  middleImg.style.transform = 'scale(1)';
+})
+
+// contact section
+let contacth4 = document.querySelector('.contact h4')
+contacth4.innerText = siteContent['contact']['contact-h4']
+
+let contactp = document.querySelectorAll('.contact p')
+contactp[0].innerText = siteContent['contact']['address']
+contactp[1].innerText = siteContent['contact']['phone']
+contactp[2].innerText = siteContent['contact']['email']
+
+// footer section
+let footerNote = document.querySelector('footer')
+footerNote.innerText = siteContent['footer']['copyright']
